@@ -38,11 +38,13 @@ a {
   @include flex(center, center);
   width: 100%;
   height: 100vh;
+  padding: 20px;
 }
 
 .expenses-chart__container {
   @include flex(center, center);
   flex-direction: column;
   width: 536px;
+  min-width: 100px;
   gap: 30px;
 }
