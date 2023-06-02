@@ -6,12 +6,12 @@ function Header() {
   const currentBalance = 921.48;
   return (
     <div className="header">
-      <div className="header__text">
-        <h1 className="header__text--title">My balance</h1>
-        <div className="header__text--balance">
-          {`$${currentBalance}`}
-        </div>
-      </div>
+      <h1 className="header__balance">
+        My balance <br />
+        <span className="amount">
+          ${currentBalance}
+        </span>
+      </h1>
       <div className="header__logo">
         <img src={logo} alt="logo" />
       </div>
