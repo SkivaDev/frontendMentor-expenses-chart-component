@@ -5,18 +5,17 @@ import {
   LinearScale,
   BarElement,
   Title,
-  Tooltip,
-  Legend,
+  Tooltip
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import './chart.scss'
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
   BarElement,
   Title,
-  Tooltip,
-  Legend
+  Tooltip
 );
 
 const state = {
@@ -34,8 +33,19 @@ const state = {
 
 function Chart() {
   return (
-    <div>
-      {/* <Bar data={state} /> */}
+    <div className='chart'>
+      <h2 className="chart__title">Spending - Last 7 days</h2>
+      <Bar data={state}  className='chart__bar'/>
+      <div className="chart__info">
+        <div className="chart__info--month">
+        Total this month <br />
+        <span className="amount">$921.48</span>
+        </div>
+        <div className="chart__info--lastMonth">
+          <span className="percentage">+2.4%</span> <br />
+          from last month
+        </div>
+      </div>
     </div>
   )
 }
